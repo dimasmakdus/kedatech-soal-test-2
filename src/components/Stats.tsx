@@ -14,7 +14,7 @@ const Stats: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           {stats.map((s, i) => (
-            <div key={i} className={styles.card}>
+            <div key={i} className={styles.card} data-testid="stat-card">
               <div className={styles.iconWrap}>
                 <s.icon className={styles.icon} />
               </div>

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className={styles.left}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Package className={styles.icon} />
+              <Package className={styles.icon} data-testid="package-icon" />
             </div>
             <span className={styles.title}>Dimas ERP</span>
           </div>

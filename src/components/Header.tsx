@@ -56,26 +56,27 @@ const Header: React.FC<Props> = ({ onLogin }) => {
         {/* Logo */}
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Package className={styles.icon} />
+            <Package className={styles.icon} data-testid="package-icon" />
           </div>
           <span className={styles.logoText}>Dimas ERP</span>
         </div>
 
         {/* Desktop & Mobile Menu */}
-        <nav className={isMenuOpen ? styles.navMobile : styles.navDesktop}>
+        <nav role="navigation" className={isMenuOpen ? styles.navMobile : styles.navDesktop}>
           {publicMenus.map((menu: any) =>
             <a onClick={() => handleScrollTo(menu.id)}>{menu.name}</a>
           )}
-          <button onClick={onLogin} className={styles.loginBtn}>
+          <button data-testid="login-btn" onClick={onLogin} className={styles.loginBtn}>
             Masuk
           </button>
-          <button onClick={toggleTheme} className={styles.themeToggle}>
+          <button aria-label="toggle-theme" onClick={toggleTheme} className={styles.themeToggle}>
             {theme === "light" ? <Moon /> : <Sun />}
           </button>
         </nav>
 
         {/* Mobile Toggle */}
         <button
+          aria-label="toggle-menu"
           className={styles.menuToggle}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
