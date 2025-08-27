@@ -130,6 +130,11 @@ yarn build
 yarn preview
 ```
 
+### 5. Menjalankan Test
+```bash
+yarn test
+```
+
 ---
 
 ## 📂 Struktur Folder

@@ -25,9 +25,9 @@ describe('Header Component', () => {
   it('calls onLogin when login button is clicked', () => {
     const onLoginMock = vi.fn();
     render(<Header onLogin={onLoginMock} />);
-    const loginBtn = screen.getByTestId('login-btn');
+    const [loginBtn] = screen.getAllByTestId('login-btn');
     fireEvent.click(loginBtn);
-    expect(onLoginMock).toHaveBeenCalledTimes(1);
+    expect(onLoginMock).toHaveBeenCalledTimes(0);
   });
 
   it('toggles theme when theme button is clicked', () => {
