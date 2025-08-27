@@ -128,6 +128,7 @@ yarn test
 src/
  ├─ components/        # Semua komponen UI
  ├─ styles/            # SCSS modules + global styles
+ ├─ tests/             # Unit Test
  ├─ App.tsx            # Root component
  └─ main.tsx           # Entry point aplikasi
 ```
