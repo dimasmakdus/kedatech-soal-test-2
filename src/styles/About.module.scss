@@ -1,0 +1,100 @@
+@use "./variables" as *;
+
+.about {
+  padding: 5rem 1.5rem;
+  background: white;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $slate-800;
+  }
+
+  .subtitle {
+    color: $slate-600;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: $slate-50;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $blue-600;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $slate-800;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $slate-600;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Dark mode
+:root[data-theme="dark"] {
+  .about {
+    background: $slate-900;
+
+    .title {
+      color: white;
+    }
+
+    .subtitle {
+      color: $slate-300;
+    }
+
+    .card {
+      background: $slate-800;
+
+      h3 {
+        color: white;
+      }
+
+      p {
+        color: $slate-300;
+      }
+
+      .icon {
+        color: $purple-400;
+      }
+    }
+  }
+}

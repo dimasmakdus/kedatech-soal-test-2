@@ -1,0 +1,108 @@
+@use "./variables" as *;
+
+.features {
+  padding: 5rem 1.5rem;
+  background: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: $slate-900;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $slate-600;
+    margin-bottom: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to bottom right, $slate-50, white);
+  border: 1px solid $slate-200;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: $slate-300;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  p {
+    color: $slate-600;
+  }
+}
+
+.iconBox {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background: $primary-gradient;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+
+  .icon {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+:root[data-theme="dark"] {
+  .features {
+    background: $slate-800
+  }
+
+  .container {
+
+    h2 {
+      color: $slate-100;
+    }
+
+    p {
+      color: $slate-300;
+    }
+  }
+
+  .card {
+    background: $slate-600;
+    border: 1px solid $slate-400;
+
+    h3 {
+      color: $slate-100
+    }
+
+    p {
+      color: $slate-300;
+    }
+  }
+}

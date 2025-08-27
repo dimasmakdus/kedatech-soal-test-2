@@ -1,0 +1,218 @@
+// src/styles/LoginModal.module.scss
+@use "./variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 1rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.2);
+}
+
+.closeBtn {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $slate-500;
+
+  .closeIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  .logo {
+    margin: 0 auto 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background: $primary-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logoIcon {
+      width: 22px;
+      height: 22px;
+      color: white;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $slate-900;
+  }
+
+  p {
+    color: $slate-600;
+    margin-top: 0.25rem;
+  }
+}
+
+.form {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: $slate-700;
+    margin-bottom: 0.35rem;
+  }
+
+  input {
+    padding: 0.75rem 1rem;
+    border: 1px solid $slate-300;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+
+    &:focus {
+      border-color: $blue-600;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: $slate-600;
+
+  input {
+    width: 16px;
+    height: 16px;
+    accent-color: $blue-600;
+  }
+}
+
+.forgot {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: $blue-600;
+  cursor: pointer;
+}
+
+.submitBtn {
+  margin-top: 0.4rem;
+  padding: 0.85rem;
+  border-radius: 9999px;
+  background: $primary-gradient;
+  background-clip: padding-box; // pastikan gradient ikut radius
+  -webkit-background-clip: padding-box;
+  color: white;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 0.75rem;
+  color: $slate-600;
+
+  .signup {
+    background: none;
+    border: none;
+    color: $blue-600;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+:root[data-theme="dark"] {
+  .modal {
+    background: $slate-800;
+  }
+
+  .header {
+    h3 {
+      color: $slate-100;
+    }
+
+    p {
+      color: $slate-300;
+    }
+  }
+
+  .field {
+    .label {
+      color: $slate-100;
+    }
+
+    input {
+      background: $slate-800;
+      border-color: $slate-600;
+      color: white;
+
+      &::placeholder {
+        color: $slate-400;
+      }
+    }
+  }
+
+  .checkbox {
+    color: $slate-300;
+
+    input {
+      accent-color: $blue-400;
+    }
+  }
+}
