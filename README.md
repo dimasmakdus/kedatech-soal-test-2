@@ -62,21 +62,7 @@
 
 ------------------------------------------------------------------------
 
-## 5. **React Router (Hash Link)**
-
--   **Kenapa Router?**
-    -   Landing page berbasis section perlu smooth scroll & navigasi
-        antar-section.
-    -   `react-router-hash-link` mendukung scroll dengan offset (supaya
-        tidak ketutup header).
--   **Fungsi di Project Ini**
-    -   Navigasi antar-menu (Features, Pricing, About, Contact, dsb).
-    -   Mendukung `scrollIntoView` dengan behavior smooth + offset
-        header.
-
-------------------------------------------------------------------------
-
-## 6. **LocalStorage**
+## 5. **LocalStorage**
 
 -   **Kenapa LocalStorage?**
     -   Menyimpan preferensi user (dark/light mode).
@@ -87,7 +73,7 @@
 
 ------------------------------------------------------------------------
 
-## 7. **Responsive Design**
+## 6. **Responsive Design**
 
 -   **Kenapa Harus Responsive?**
     -   Landing page ERP ditujukan untuk berbagai device (desktop,
