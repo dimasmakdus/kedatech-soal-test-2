@@ -90,8 +90,8 @@
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/username/landing-erp-tier.git
-cd landing-erp-tier
+git clone https://github.com/dimasmakdus/kedatech-soal-test-2.git
+cd kedatech-soal-test-2
 ```
 
 ### 2. Install Dependencies
